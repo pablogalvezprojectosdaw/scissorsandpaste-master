@@ -2,8 +2,12 @@
 <xsl:output method="text"/>
 <xsl:template match="/">
  <xsl:for-each select="raiz/registro">
- <xsl:value-of select="id"/>, <xsl:value-of select="titulo"/>, <xsl:value-of select="fecha/anio"/>
- <xsl:text>&#xA;</xsl:text>
+ <xsl:text>&#xA;</xsl:text> [ <xsl:value-of select="id"/> ] <xsl:text>&#xA;</xsl:text>
+ <xsl:for-each select = "texto/p">
+    <xsl:value-of select="."/>
+    <xsl:text>&#xA;</xsl:text>
+     </xsl:for-each>
+
  </xsl:for-each>
 </xsl:template>
 </xsl:stylesheet>
