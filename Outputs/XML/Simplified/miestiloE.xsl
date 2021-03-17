@@ -4,13 +4,8 @@
  <xsl:for-each select="raiz/registro">
  <xsl:sort select="fecha" order="ascending" data-type="text"/>
  <xsl:if test="fecha/anio='1789'">
- 
- 
- <xsl:value-of select="id"/>
-  <xsl:value-of select="titulo"/>
-   <xsl:value-of select="fecha/@when"/>
+ <xsl:value-of select="id"/>, <xsl:value-of select="titulo"/>, <xsl:value-of select="fecha/@when"/>
  <xsl:text>&#xA;</xsl:text>
-
  </xsl:if>
  </xsl:for-each>
 </xsl:template>
